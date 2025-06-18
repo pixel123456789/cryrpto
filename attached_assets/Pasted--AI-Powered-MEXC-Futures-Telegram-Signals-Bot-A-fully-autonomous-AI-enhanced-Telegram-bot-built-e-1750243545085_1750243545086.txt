@@ -1,0 +1,111 @@
+🚀 AI-Powered MEXC Futures Telegram Signals Bot
+A fully autonomous, AI-enhanced Telegram bot built exclusively for MEXC USDT-Margined Futures trading. This bot acts as your 24/7 crypto trading assistant, delivering high-confidence trade signals, tracking your manual entries, analyzing chart screenshots using real AI, and providing live updates on PnL and recommendations based on real market conditions.
+
+🔧 Core Features
+✅ Trade Logging & Tracking
+/open command: Log a manual trade (LONG/SHORT) by symbol, entry price, leverage, and capital used.
+
+Bot stores this data and begins real-time monitoring.
+
+/close command to manually close the trade.
+
+/status shows all currently open trades with real-time price, PnL %, and suggestions.
+
+✅ Full MEXC Futures Support
+Auto-detects and supports all listed USDT-M Futures pairs (e.g., BTC_USDT, ETH_USDT, ARB_USDT, etc.).
+
+Uses live MEXC API data to calculate performance and scan for signals.
+
+✅ TP/SL Calculation & PnL
+TP and SL dynamically calculated based on:
+
+Entry price
+
+Leverage
+
+Volatility (ATR-based or fixed % methods)
+
+Continuous unrealized PnL tracking with alerts
+
+✅ Auto Trade Recommendations
+Sends updates: “+27% — consider taking profit” or “-9% — approaching SL”
+
+Adapts based on current market direction and your trade type
+
+📡 Signal Detection Engine
+Scans every MEXC Futures pair for:
+
+RSI extremes
+
+MACD crossovers
+
+EMA alignment
+
+Volume anomalies
+
+Pattern detections (flags, triangles, wedges)
+
+Calculates a confidence score
+
+Commands:
+
+/signals — list of best trades ranked by confidence
+
+Auto-alerts you when ultra-high-confidence trade is found (e.g., >90%)
+
+🧠 AI Screenshot Analysis
+You send a chart screenshot to the bot
+
+It uses real AI (vision model + technical classifier) to:
+
+Detect patterns: double tops, wedges, breakouts, etc.
+
+Read candlestick and volume structure
+
+Return a futures-specific recommendation: Long, Short, or Close
+
+Includes explanation: e.g., “Rising wedge near resistance, decreasing volume = bearish”
+
+📈 Real-Time Chart Previews
+Generates real chart snapshots with:
+
+Candles
+
+RSI/MACD overlays
+
+Annotated TP/SL zones
+
+Sends as Telegram image reply on command or with signals
+
+🧠 Architecture
+Python + SQLite + Async I/O
+
+Telegram API via python-telegram-bot
+
+Signal engine runs in background loop
+
+Chart engine uses mplfinance or plotly
+
+AI chart analysis uses OpenCV + PyTorch/Sklearn
+
+Optionally Dockerized for production deployment
+
+🔐 User Experience
+Fast inline buttons for opening trades
+
+Detailed, actionable updates (“Up 42% — TP hit ✅”)
+
+Zero spam, only relevant updates
+
+Everything futures-focused (no “hold” logic, ever)
+
+📦 Final Delivery Will Include:
+✅ Full source code
+
+✅ requirements.txt
+
+✅ Run & deploy instructions
+
+✅ AI model weights (or integration instructions)
+
+✅ Modular codebase with folders: core/, ai/, charts/, signals/
